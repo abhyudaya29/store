@@ -8,9 +8,11 @@ const Items=({item})=>{
     
     return (
         <>
-        <div>
-            <h1>{item.title}</h1>
+        <div className="container mx-auto p-4 border-2-black">
+            <h1 className="">{item.title}</h1>
             <img src={item.image} alt="item"/>
+            <p>{item.description}</p>
+            <p>{item.price}</p>
         </div>
 
        

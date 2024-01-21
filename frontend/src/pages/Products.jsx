@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
 import Items from "../components/Items";
-import React from "react";
 const Products = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
@@ -28,6 +27,8 @@ const Products = () => {
 
   return (
     <>
+      <div className="container mx-auto p-4">
+      <div className="grid xs:grid-col1 sm:grid-col-2 md:grid-col-3 lg:grid-cols-4 max-w-6xl p-2">
       {loading ? (
         <Spinner />
       ) : (
@@ -41,6 +42,8 @@ const Products = () => {
           )}
         </>
       )}
+      </div>
+      </div>
     </>
   );
 };
